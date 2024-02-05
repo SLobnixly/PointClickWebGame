@@ -6,19 +6,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Point and click adventure</title>
+        
         <link rel="stylesheet" href="css/main.css">
-
+       
     </head>
+
     <body>
         
-        <divid id="title">
-            <h2 id="mainTitle">Point and Click adventure</h2>
+    <div id="title">
+            <h1 id="mainTitle"></h1>
         </div>
         <div id="gamewindow">
-            <div id="">
+            <div id="dialogbar"class="foreground">
+                <div id="setmaindialog">
+                    <div id="maincharacterspeech" class="foreground">    </div>
+                    <div id="counterspeech" class="foreground">          </div>
 
+                    <div id="brownbar"></div>
             </div> 
          </div>
 
+        <div id="inventoryBox" class="foreground">
+        <p>inventory</p>
+        <ul id="inventoryList">
+
+        </ul>
+    </div>
+
+</div>
+<script scr="js/main.js"></script>
     </body>
 </html>

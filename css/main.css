@@ -6,7 +6,7 @@ body{
     margin: 0px;
     background-color: #000000;
 }
-h2{
+h1{
     color: #ffffff;
 }
 p{
@@ -54,4 +54,28 @@ p{
 .foreground{
     position:absolute;
     z-index: 1000;
+}
+
+#brownbar{
+    position: absolute;
+    height: 32px;
+    width: 800px;
+    background-color: #693100;
+    bottom: 0px;
+}
+#maincharacterspeech{
+    left: 0px;
+    bottom: 0px;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+
+#counterspeech{
+    right: 0px;
+    bottom: 0px;
+    background-color: red;
+    width: 100px;
+    height: 100px;
 }
