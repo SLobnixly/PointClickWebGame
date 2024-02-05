@@ -1,3 +1,57 @@
 body{
-    background-color: deeppink;
+    display: grid;
+    grid-template-columns: auto 800px auto;
+    grid-template-rows: auto 600px auto;
+    gap: 20px;
+    margin: 0px;
+    background-color: #000000;
+}
+h2{
+    color: #ffffff;
+}
+p{
+    margin: 0px;
+}
+
+#title
+{
+    text-align: center;
+
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+#gamewindow{
+    position: relative;
+    width: 800px;
+    height: 800px;
+
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: blue;
+}
+#inventoryBox{
+    position: relative;
+    display: block;
+    
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+    color: #ffffff;
+    background-color: #693100;
+    border: #ffffff 1px solid;
+    padding: 10px;
+}
+#dialogBar{
+    bottom: 0px;
+}
+#setmaindialog{
+    position: relative;
+    height: 64px;
+    width: 800px;
+}
+
+.foreground{
+    position:absolute;
+    z-index: 1000;
 }
