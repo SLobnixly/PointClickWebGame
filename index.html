@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <title>point and click adventure</title>
+</head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Point and click adventure</title>
-        
-        <link rel="stylesheet" href="css/main.css">
-       
-    </head>
-
-    <body>
-        
+<body>
     <div id="title">
-            <h1 id="mainTitle"></h1>
-        </div>
-        <div id="gamewindow">
-            <div id="dialogbar"class="foreground">
-                <div id="setmaindialog">
-                    <div id="maincharacterspeech" class="foreground">    </div>
-                    <div id="counterspeech" class="foreground">          </div>
-
-                    <div id="brownbar"></div>
-            </div> 
-         </div>
-
-        <div id="inventoryBox" class="foreground">
-        <p>inventory</p>
-        <ul id="inventoryList">
-
-        </ul>
+        <h1 id="mainTitle"></h1>
     </div>
+    <div id="gameWindow">
+        <!--dialog bar-->
+        <div id="dialogBar" class="foreground">
+            <div id="setMainDialog">
+                <div id="mainCharacterSpeech" class="foreground"></div>
 
-</div>
-<script scr="js/main.js"></script>
-    </body>
+                <div id="counterSpeech" class="foreground"></div>
+                <div id="brownBar"></div>
+            </div>
+        </div>
+
+        <!-- inventory -->
+        <div id="inventoryBox" class="foreground">
+            <p>Inventory</p>
+            <ul id="inventoryList">
+
+            </ul>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

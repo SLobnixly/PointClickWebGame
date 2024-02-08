@@ -1,81 +1,84 @@
-body{
+body {
     display: grid;
     grid-template-columns: auto 800px auto;
-    grid-template-rows: auto 600px auto;
+    grid-template-rows: auto 608px auto;
     gap: 20px;
     margin: 0px;
     background-color: #000000;
 }
-h1{
-    color: #ffffff;
+
+h1 {
+    color: white;
 }
-p{
+
+p {
     margin: 0px;
 }
 
-#title
-{
-    text-align: center;
-
+#title {
     grid-column-start: 2;
     grid-row-start: 1;
+    text-align: center;
 }
-#gamewindow{
+
+#gameWindow {
     position: relative;
     width: 800px;
-    height: 800px;
-
+    height: 608px;
     grid-column-start: 2;
     grid-row-start: 2;
+
     background-color: blue;
 }
-#inventoryBox{
+
+#inventoryBox {
     position: relative;
     display: block;
-    
     left: 10px;
-    top: 10px;
-    width: 100px;
-    height: 100px;
-    color: #ffffff;
-    background-color: #693100;
-    border: #ffffff 1px solid;
+    top:10px;
+    width: 180px;
+    height: 80px;
+    color:white;
+    background-color: #602d00;
+    border: white 1px solid;
     padding: 10px;
 }
-#dialogBar{
+
+#dialogBar {
     bottom: 0px;
 }
-#setmaindialog{
+
+#setMainDialog {
     position: relative;
     height: 64px;
     width: 800px;
 }
 
-.foreground{
+#brownBar {
     position:absolute;
-    z-index: 1000;
-}
-
-#brownbar{
-    position: absolute;
     height: 32px;
     width: 800px;
-    background-color: #693100;
-    bottom: 0px;
+    background-color: #442c1c;
+    bottom:0px;
 }
-#maincharacterspeech{
+
+#mainCharacterSpeech {
     left: 0px;
     bottom: 0px;
     background-color: red;
-    width: 100px;
+    width:100px;
     height: 100px;
 }
 
-
-#counterspeech{
+#counterSpeech {
     right: 0px;
     bottom: 0px;
     background-color: red;
-    width: 100px;
+    width:100px;
     height: 100px;
+}
+
+.foreground {
+    position: absolute;
+    z-index: 1000;
 }
