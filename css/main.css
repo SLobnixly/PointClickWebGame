@@ -18,6 +18,11 @@ p {
 
 /*ID's */
 
+#gameover{
+    opacity: 0;
+    position: absolute;
+}
+
 #title {
     grid-column-start: 2;
     grid-row-start: 1;
@@ -47,40 +52,27 @@ p {
     width: 64px;
     height: 64px;
     opacity: 1;
-    top: 66px;
-    left: 480px;
+    top: 273px;
+    left: 123px;
 }
 
 #door2 {
     width: 44px;
     height: 54px;
     /* background-color: #fb00ff; */
-    top: 296px;
-    left: 169px;
+    top: 280px;
+    left: 450px;
 }
 
-#key1 {
-    width: 32px;
-    height: 32px;
-    background-color: #fffb00;
-    opacity: 1;
-    top: 166px;
-    left: 416px;
-}
 
-#sign {
-    width: 64px;
-    height: 32px;
-    background-color: #442c1c;
-    top: 450px;
-    left: 10px;
-}
 
-#statue {
-    width: 32px;
-    height: 64px;
-    top: 284px;
-    left: 704px;
+
+
+#mush {
+    width: 100px;
+    height: 80px;
+    top: 125px;
+    left: 194px;
 }
 
 /*Inventory box*/
@@ -92,7 +84,7 @@ p {
     width: 180px;
     height: 80px;
     color: white;
-    background-color: #602d00;
+    background-color: #000000;
     border: white 1px solid;
     padding: 10px;
 }
@@ -112,7 +104,7 @@ p {
     position: absolute;
     height: 32px;
     width: 800px;
-    background-color: #442c1c;
+    background-color: #292928;
     bottom: 0px;
 }
 
@@ -137,6 +129,15 @@ p {
 
 #counterAvatarImg {
     opacity: 0;
+position: absolute;
+}
+#counterAvatarImg2 {
+    opacity: 0;
+position: absolute; 
+}
+#counterAvatarImg3 {
+    opacity: 0;
+position: absolute; 
 }
 
 #counterSpeech {
@@ -149,6 +150,7 @@ p {
     height: 608px;
     top: 0px;
     left: 0px;
+    opacity: 1;
 }
 
 

@@ -11,7 +11,9 @@ gameState = {
 }
 
 const sec = 1000;
-
+//game over
+const gameover = document.getElementById("gameover");
+const tilemap = document.getElementById("tilemap");
 //Main Character
 const mainCharacter = document.getElementById("mainCharacter");
 const offsetCharacter = 16;
@@ -20,6 +22,8 @@ const offsetCharacter = 16;
 const mainCharacterSpeech = document.getElementById("mainCharacterSpeech");
 const counterSpeech = document.getElementById("counterSpeech");
 const counterAvatarImg = document.getElementById("counterAvatarImg");
+const counterAvatarImg2 = document.getElementById("counterAvatarImg2");
+const counterAvatarImg3 = document.getElementById("counterAvatarImg3");
 const mcAudio = document.getElementById("mcAudio");
 const cAudio = document.getElementById("cAudio");
 //Inventory
@@ -44,26 +48,37 @@ gameWindow.onclick = function (e) {
     switch (e.target.id) {
 
         case "door1":
-            sign.style.opacity = 1;
-            if (document.getElementById("key1") !== null) {
-                console.log('Found key!');
-                document.getElementById("key1").remove();
-                changeInventory('key', 'add');
-            }
+            showMessage(mainCharacterSpeech, mcAudio, "Hey I heard there was a torch here?");
+            setTimeout(function () { counterAvatarImg2.style.opacity = 1; }, 4 * sec);
+            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "hmm did that weird mushroom guy send you here?");
+            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "Yeah but can you give the torch to me");
+            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "Fine fine I owe him one so ill give it to ya");
+            setTimeout(function () { counterAvatarImg2.style.opacity = 0; }, 16 * sec);
+            changeInventory('Torch', 'delete');
+            changeInventory('Torch', 'add');
+            break;
+        
 
             break;
         case "door2":
             if (gameState.door2locked == true) {
                 // check if we have key
-                if (document.getElementById("inv-key") !== null) {
+                if (document.getElementById("inv-Torch") !== null) {
                     //yes -> unlock door?
                     gameState.door2locked = false;
-                    changeInventory('key', 'delete');
-                    console.log('Door unlocked!');
+                    changeInventory('Torch', 'delete');
+                    showMessage(mainCharacterSpeech, mcAudio, "Time to find out if theres any treasure in here");
+                    setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
+                    setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "Who dares to wake me up");
+                    setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "Hello sir may I take the treasure that is in this cave?");
+                    setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "You foolish human you will now die!");
+                    setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
+                    setTimeout(function () { gameover.style.opacity = 1; }, 17 * sec);
+                    setTimeout(function () { tilemap.style.opacity = 0; }, 17 * sec);
 
                 } else {
                     //no -> alert 'door locked'
-                    alert("Door is locked!");
+                    alert("Its dark lets turn back!");
                 }
             } else {
                 console.log('enter building');
@@ -71,26 +86,21 @@ gameWindow.onclick = function (e) {
 
             break;
 
-        case "sign":
 
-            sign.style.opacity = 0.5;
-
-            break;
-
-        case "statue":
-            showMessage(mainCharacterSpeech, mcAudio, "Wow cool statue..");
+        case "mush":
+            showMessage(mainCharacterSpeech, mcAudio, "Hey anyone there?");
             setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I can talk you know..dummy");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "You don't have to be so mean.");
-            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "You should check the north house..");
+            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "Stop shouting were sleeping here");
+            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "Fine fine any hints on where to find a torch?");
+            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "You should check the southern clocktower..");
             setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
             break;
 
         default:
-            //explode
+           
 
 
-            sign.style.opacity = 1;
+            
             break;
 
     }
